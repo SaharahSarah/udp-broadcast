@@ -14,7 +14,7 @@
 //for Mac OS X
 #include <stdlib.h>
 
-#define LOCAL_SERVER_PORT 13070
+#define LOCAL_SERVER_PORT 37010
 #define MAX_MSG 100
 
 int main(int argc, char *argv[]) {
