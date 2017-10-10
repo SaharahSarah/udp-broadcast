@@ -14,12 +14,12 @@
 //for Mac OS X
 #include <stdlib.h>
 
-#define LOCAL_SERVER_PORT 1500
+#define LOCAL_SERVER_PORT 13070
 #define MAX_MSG 100
 
 int main(int argc, char *argv[]) {
   
-  int sd, rc, n, cliLen;
+  int sd, rc, n, cliLen, x;
   struct sockaddr_in cliAddr, servAddr;
   char msg[MAX_MSG];
   int broadcast = 1;
@@ -50,8 +50,9 @@ int main(int argc, char *argv[]) {
   printf("%s: waiting for data on port UDP %u\n", 
 	   argv[0],LOCAL_SERVER_PORT);
 
+
   /* server infinite loop */
-  while(1) {
+  for(x = 0; x < 10; x++) {
     
     /* init buffer */
     memset(msg,0x0,MAX_MSG);
